@@ -1,26 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: saichaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/08 13:03:05 by saichaou          #+#    #+#             */
-/*   Updated: 2022/11/08 14:25:32 by saichaou         ###   ########.fr       */
+/*   Created: 2022/11/08 14:44:08 by saichaou          #+#    #+#             */
+/*   Updated: 2022/11/08 14:51:33 by saichaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-
-void	*ft_memset(void *s, int c, size_t n)
+strlcpy(char *dst, const char *src, size_t size)
 {
-		size_t i;
-
-		i = 0;
-		while (i < n)
-		{
-			((unsigned char *)s)[i] = (unsigned char) c;
-			i++;
-		}
-		return (s);
+	
 }
