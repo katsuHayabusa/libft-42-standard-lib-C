@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   bzero.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: saichaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/09 12:00:33 by saichaou          #+#    #+#             */
-/*   Updated: 2022/11/09 12:53:08 by saichaou         ###   ########.fr       */
+/*   Created: 2022/11/09 11:46:38 by saichaou          #+#    #+#             */
+/*   Updated: 2022/11/09 11:50:43 by saichaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lib_ft.h"
 
-int	ft_toupper(int c)
+void	ft_bzero(void *mem, size_t size)
 {
-	if (c >= 97 && c <= 122)
-		c -= 32;
-	return (c);
+	int	i;
+
+	i = 0;
+	while (i < size)
+	{
+		((unsigned char *) mem)[i] = (unsigned char) "/0";
+		i++;
+	}
 }
