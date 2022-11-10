@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: saichaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/07 15:04:01 by saichaou          #+#    #+#             */
-/*   Updated: 2022/11/10 14:11:17 by saichaou         ###   ########.fr       */
+/*   Created: 2022/11/10 14:15:04 by saichaou          #+#    #+#             */
+/*   Updated: 2022/11/10 14:18:25 by saichaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lib_ft.h"
+#include "libft.h"
 
-int	ft_strlen(char *str)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	int	i;
 
 	i = 0;
-	while (str[i])
+	while (s1[i] && s2[i] && s1[i] == s2[i])
 		i++;
-	return (i);
+	return (s1[i] - s2[i]);
 }

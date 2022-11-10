@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: saichaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/09 16:15:17 by saichaou          #+#    #+#             */
-/*   Updated: 2022/11/09 16:37:50 by saichaou         ###   ########.fr       */
+/*   Created: 2022/11/10 14:53:30 by saichaou          #+#    #+#             */
+/*   Updated: 2022/11/10 15:20:39 by saichaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lib_ft.h"
-
-void	*ft_memmove(void *dest, const void *src, size_t n)
+size_t	strlcat(char *dst, const char *src, size_t size)
 {
 	int	i;
-	unsigned char	*temp;
+	int	j;
 
 	i = 0;
-	while (i < n)
+	j = 0;
+	while (dst[i])
+		i++;
+	while (i < size && src[j])
 	{
-		temp 
+		dest[i] = src[i];
+		i++;
 	}
+	dst[i] = '\0';
+	return (dest);
 }
