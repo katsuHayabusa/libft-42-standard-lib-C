@@ -6,7 +6,7 @@
 /*   By: saichaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 14:53:30 by saichaou          #+#    #+#             */
-/*   Updated: 2022/11/10 15:20:39 by saichaou         ###   ########.fr       */
+/*   Updated: 2022/11/12 10:48:26 by saichaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ size_t	strlcat(char *dst, const char *src, size_t size)
 	j = 0;
 	while (dst[i])
 		i++;
-	while (i < size && src[j])
+	while (i < size - 1 && src[j])
 	{
 		dest[i] = src[i];
 		i++;
 	}
 	dst[i] = '\0';
-	return (dest);
+	return (i);
 }

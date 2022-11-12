@@ -1,26 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: saichaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/09 13:53:29 by saichaou          #+#    #+#             */
-/*   Updated: 2022/11/12 16:11:06 by saichaou         ###   ########.fr       */
+/*   Created: 2022/11/12 14:48:39 by saichaou          #+#    #+#             */
+/*   Updated: 2022/11/12 16:10:22 by saichaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lib_ft.h"
+#include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	int	i;
+	int	j;
 
 	i = 0;
-	while (i < n)
+	while (big[i] && i < len)
 	{
-		((unsigned char *) dest)[i] = ((unsigned char *) src)[i];
-		i++;	
+		if (big[i] == *little)
+		{
+			j = 0;
+			while (big[i + j] == little[j] && little[j])
+			{
+				j++;
+			}
+			if (little[j] == '\0')
+				return ((char *)&big[i]);
+		}
+		i++;
 	}
-	return (dest);
+	return (NULL);
 }
