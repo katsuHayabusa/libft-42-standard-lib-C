@@ -1,32 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: saichaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/09 11:50:57 by saichaou          #+#    #+#             */
-/*   Updated: 2022/11/12 18:46:19 by saichaou         ###   ########.fr       */
+/*   Created: 2022/11/12 19:17:34 by saichaou          #+#    #+#             */
+/*   Updated: 2022/11/12 19:25:07 by saichaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <stddef.h>
-# include <stdlib.h>
+char	*ft_strdup(const char *s)
+{
+	int	i;
+	char	*ptr;
 
-/* mem */
-
-void	bzero(void *mem, size_t size);
-void	*ft_memset(void *s, int c, size_t n);
-
-/* char */
-
-int	ft_isalnum(char c);
-int	ft_isalpha(char c);
-int	ft_isprint(char c);
-int	ft_isdigit(char c);
-int	ft_tolower(int c);
-int	ft_toupper(int c);
-#endif
+	i = 0;
+	while (s[i])
+		i++;
+	ptr = malloc (sizeof(char) * i);
+	while (i > 0)
+	{
+		ptr[i] = s[i];
+		i--;
+	}
+	return (ptr);
+}
