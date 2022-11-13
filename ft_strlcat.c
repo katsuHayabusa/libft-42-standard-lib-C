@@ -6,11 +6,11 @@
 /*   By: saichaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 14:53:30 by saichaou          #+#    #+#             */
-/*   Updated: 2022/11/12 10:48:26 by saichaou         ###   ########.fr       */
+/*   Updated: 2022/11/13 11:44:24 by saichaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t	strlcat(char *dst, const char *src, size_t size)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	int	i;
 	int	j;
