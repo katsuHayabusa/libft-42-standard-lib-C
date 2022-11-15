@@ -6,7 +6,7 @@
 /*   By: saichaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 14:48:39 by saichaou          #+#    #+#             */
-/*   Updated: 2022/11/12 16:10:22 by saichaou         ###   ########.fr       */
+/*   Updated: 2022/11/15 14:22:29 by saichaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	int	j;
 
 	i = 0;
-	while (big[i] && i < len)
+	while (big[i] && i < (int) len)
 	{
 		if (big[i] == *little)
 		{

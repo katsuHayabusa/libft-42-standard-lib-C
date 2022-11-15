@@ -6,13 +6,13 @@
 /*   By: saichaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 15:00:26 by saichaou          #+#    #+#             */
-/*   Updated: 2022/11/14 15:51:10 by saichaou         ###   ########.fr       */
+/*   Updated: 2022/11/15 14:57:32 by saichaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static  int	num_size(int n)
+static int	num_size(int n)
 {
 	int	i;
 
@@ -27,7 +27,7 @@ static  int	num_size(int n)
 
 char	*ft_itoa(int n)
 {
-	int     i;
+	int		i;
 	char	*str;
 
 	if (n == 0)

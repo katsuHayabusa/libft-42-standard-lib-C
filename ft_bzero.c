@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   bzero.c                                            :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: saichaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 11:46:38 by saichaou          #+#    #+#             */
-/*   Updated: 2022/11/09 11:50:43 by saichaou         ###   ########.fr       */
+/*   Updated: 2022/11/15 14:32:21 by saichaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lib_ft.h"
+#include "libft.h"
 
 void	ft_bzero(void *mem, size_t size)
 {
 	int	i;
 
 	i = 0;
-	while (i < size)
+	while (i < (int) size)
 	{
-		((unsigned char *) mem)[i] = (unsigned char) "/0";
+		((unsigned char *) mem)[i] = '\0';
 		i++;
 	}
 }

@@ -6,11 +6,11 @@
 /*   By: saichaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 12:17:38 by saichaou          #+#    #+#             */
-/*   Updated: 2022/11/12 12:45:30 by saichaou         ###   ########.fr       */
+/*   Updated: 2022/11/15 14:29:27 by saichaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lib_ft.h"
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {

@@ -6,22 +6,22 @@
 /*   By: saichaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 14:44:08 by saichaou          #+#    #+#             */
-/*   Updated: 2022/11/13 11:44:15 by saichaou         ###   ########.fr       */
+/*   Updated: 2022/11/15 14:25:35 by saichaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lib_ft.h"
+#include "libft.h"
 
 int	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	int	i;
 
 	i = 0;
-	while (i < size && dst[i])
+	while (i < (int) size && dst[i])
 	{
 		dst[i] = src[i];
 		i++;
 	}
-	dst[i] = "/0";
+	dst[i] = '\0';
 	return (i);
 }
