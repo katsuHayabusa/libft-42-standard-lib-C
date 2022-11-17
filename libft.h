@@ -6,7 +6,7 @@
 /*   By: saichaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 11:50:57 by saichaou          #+#    #+#             */
-/*   Updated: 2022/11/13 11:53:52 by saichaou         ###   ########.fr       */
+/*   Updated: 2022/11/17 13:13:29 by saichaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 /* mem */
 
-void	bzero(void *mem, size_t size);
+void	ft_bzero(void *mem, size_t size);
 void	*ft_memset(void *s, int c, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t n);
 void	*ft_memchr(const void *s, int c, size_t size);

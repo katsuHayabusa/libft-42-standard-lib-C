@@ -6,7 +6,7 @@
 /*   By: saichaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 19:17:34 by saichaou          #+#    #+#             */
-/*   Updated: 2022/11/15 14:59:56 by saichaou         ###   ########.fr       */
+/*   Updated: 2022/11/17 13:27:44 by saichaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,15 @@ char	*ft_strdup(const char *s)
 	i = 0;
 	while (s[i])
 		i++;
-	ptr = malloc(i * sizeof(char));
+	ptr = malloc(i * sizeof(char) + 1);
+	if (!ptr)
+		return (NULL);
 	i = 0;
 	while (s[i])
 	{
 		ptr[i] = s[i];
 		i++;
 	}
+	ptr[i] = '\0';
 	return (ptr);
 }

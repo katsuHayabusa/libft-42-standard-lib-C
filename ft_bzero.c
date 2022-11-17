@@ -6,7 +6,7 @@
 /*   By: saichaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 11:46:38 by saichaou          #+#    #+#             */
-/*   Updated: 2022/11/15 14:32:21 by saichaou         ###   ########.fr       */
+/*   Updated: 2022/11/17 13:00:00 by saichaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	ft_bzero(void *mem, size_t size)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
-	while (i < (int) size)
+	while (i < size)
 	{
 		((unsigned char *) mem)[i] = '\0';
 		i++;
