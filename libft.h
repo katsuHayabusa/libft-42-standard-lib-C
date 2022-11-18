@@ -6,7 +6,7 @@
 /*   By: saichaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 11:50:57 by saichaou          #+#    #+#             */
-/*   Updated: 2022/11/17 13:13:29 by saichaou         ###   ########.fr       */
+/*   Updated: 2022/11/18 16:48:41 by saichaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,12 @@ int	ft_isascii(unsigned char c);
 int	ft_atoi(char *str);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strdup(const char *s);
-size_t	strlcat(char *dst, const char *src, size_t size);
-int	strlcpy(char *dst, const char *src, size_t size);
+size_t	ft_strlcat(char *dst, const char *src, size_t size);
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strchr(const char *s, int c);
 int	ft_strlen(char *str);
+int ft_strncmp(const char *s1, const char *s2, size_t n);
 
 #endif
