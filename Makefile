@@ -6,7 +6,7 @@
 #    By: saichaou <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/16 17:51:07 by saichaou          #+#    #+#              #
-#    Updated: 2022/11/18 15:35:55 by saichaou         ###   ########.fr        #
+#    Updated: 2022/11/19 13:37:43 by saichaou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,5 +32,8 @@ $(NAME) : $(FILES_OBJS)
 
 fclean :
 	$(RM) $(NAME) $(FILES_OBJS)
+
+clean :
+	$(RM) $(FILES_OBJS)
 
 re : fclean all
