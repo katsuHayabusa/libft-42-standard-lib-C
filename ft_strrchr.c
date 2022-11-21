@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: saichaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/10 16:29:06 by saichaou          #+#    #+#             */
-/*   Updated: 2022/11/15 14:22:07 by saichaou         ###   ########.fr       */
+/*   Created: 2022/11/21 14:19:10 by saichaou          #+#    #+#             */
+/*   Updated: 2022/11/21 15:21:14 by saichaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,16 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int	index;
-	int	i;
+	char	*ptr;
 
-	index = 0;
-	while (s[i])
+	ptr = NULL;
+	while (*s != '\0')
 	{
-		if (s[i] == c)
-			index = i;
-		i++;
+		if ((char) *s == (char) c)
+			ptr = (char *)s;
+	s++;
 	}
-	return ((char *)&s[index]);
+	if (*s == '\0' && (char) c == '\0')
+		return ((char *) s);
+	return (ptr);
 }
