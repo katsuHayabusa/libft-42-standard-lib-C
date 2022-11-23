@@ -6,7 +6,7 @@
 /*   By: saichaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 11:50:57 by saichaou          #+#    #+#             */
-/*   Updated: 2022/11/21 14:26:56 by saichaou         ###   ########.fr       */
+/*   Updated: 2022/11/23 16:29:30 by saichaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	ft_isascii(unsigned char c);
 
 /* string */
 
-int	ft_atoi(char *str);
+int	ft_atoi(const char *str);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strdup(const char *s);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
