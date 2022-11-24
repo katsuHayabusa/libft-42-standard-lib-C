@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: saichaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/07 15:04:01 by saichaou          #+#    #+#             */
-/*   Updated: 2022/11/24 16:50:39 by saichaou         ###   ########.fr       */
+/*   Created: 2022/11/24 16:41:41 by saichaou          #+#    #+#             */
+/*   Updated: 2022/11/24 16:46:10 by saichaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(const char *str)
+void	ft_putnbr_fd(int n, int fd)
 {
-	int	i;
+	char	*num;
 
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+	num = ft_itoa(n);
+	ft_putstr_fd(num, fd);
+	free(num);
 }
