@@ -6,13 +6,13 @@
 /*   By: saichaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 14:53:21 by saichaou          #+#    #+#             */
-/*   Updated: 2022/11/15 14:19:35 by saichaou         ###   ########.fr       */
+/*   Updated: 2022/11/28 16:50:12 by saichaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(char c)
+int	ft_isprint(int c)
 {
-	return (!(c < 32 || c == 127));
+	return (c >= 32 && c <= 126);
 }

@@ -6,7 +6,7 @@
 /*   By: saichaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 16:41:41 by saichaou          #+#    #+#             */
-/*   Updated: 2022/11/24 16:46:10 by saichaou         ###   ########.fr       */
+/*   Updated: 2022/11/28 14:18:07 by saichaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,8 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char	*num;
-
-	num = ft_itoa(n);
-	ft_putstr_fd(num, fd);
-	free(num);
+	if (n == 0)
+		write(fd, "0", 1);
+	else
+		ft_putstr_fd(ft_itoa(n), fd);
 }

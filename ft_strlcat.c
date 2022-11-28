@@ -6,11 +6,9 @@
 /*   By: saichaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 14:53:30 by saichaou          #+#    #+#             */
-/*   Updated: 2022/11/24 16:56:54 by saichaou         ###   ########.fr       */
+/*   Updated: 2022/11/28 17:18:30 by saichaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 #include "libft.h"
 
@@ -20,6 +18,8 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	size_t	len_src;
 	size_t	len_dest;
 
+	if (size == 0 && !dest)
+		return (0);
 	i = 0;
 	len_src = ft_strlen(src);
 	len_dest = ft_strlen(dest);

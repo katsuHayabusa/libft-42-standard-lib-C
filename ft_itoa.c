@@ -6,7 +6,7 @@
 /*   By: saichaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 15:00:26 by saichaou          #+#    #+#             */
-/*   Updated: 2022/11/24 17:16:47 by saichaou         ###   ########.fr       */
+/*   Updated: 2022/11/28 17:54:15 by saichaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static size_t	num_size(int n)
 {
-	int	i;
+	int				i;
 	unsigned int	pos_n;
 
 	i = 0;
@@ -38,13 +38,15 @@ static int	neg_num(int n)
 
 char	*ft_itoa(int n)
 {
-	char	*str;
-	int		i;
+	char			*str;
+	int				i;
 	unsigned int	pos_n;
 
 	i = num_size(n) - 1 + neg_num(n);
 	pos_n = n;
 	str = malloc((num_size(n) * sizeof(char)) + neg_num(n) + 1);
+	if (!str)
+		return (NULL);
 	str[i + 1] = '\0';
 	if (!str)
 		return (NULL);
