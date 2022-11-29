@@ -6,7 +6,7 @@
 /*   By: saichaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 13:23:17 by saichaou          #+#    #+#             */
-/*   Updated: 2022/11/28 15:45:32 by saichaou         ###   ########.fr       */
+/*   Updated: 2022/11/29 12:18:10 by saichaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	int		j;
 	char	*ptr;
 
+	if (start >= (unsigned int) ft_strlen(s))
+		return (NULL);
 	i = 0;
 	j = start;
 	ptr = malloc(len * sizeof(char) + 1);
