@@ -6,7 +6,7 @@
 /*   By: saichaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 13:54:40 by saichaou          #+#    #+#             */
-/*   Updated: 2022/11/29 17:20:59 by saichaou         ###   ########.fr       */
+/*   Updated: 2022/11/30 03:59:31 by saichaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,41 +18,51 @@ size_t	wcount(char const *s, char c)
 	int	j;
 
 	i = 0;
-	j = 0;
+	j = 1;
 	while (s[i])
 	{
 		if (s[i] == c)
 			j ++;
 		i++;
 	}
-	return (j + 1);
+	return (j);
 }
 
-size_t	ccount(char const *s, char c)
+size_t	ccount(char const *s, char c, int index)
 {
 	int	i;
 
-	i = 0;
+	i = index;
 	while (s[i] && s[i] != c)
 		i++;
-	return (i);
+	return (i - index);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char	**ptr;
-	int		i;
 	int		j;
+	int		i;
 	int		k;
+	char	**split;
 
-	ptr = malloc(wcount(s,c) * sizeof(char) + 1);
-	if (!ptr)
-		return (NULL);
 	i = 0;
 	j = 0;
-	while (s[i])
+	k = 0;
+	split = malloc(wcount(s,c) * sizeof(char) + 1);
+	if (!split)
+		return (NULL);
+	while(s[i])
 	{
-		k = 0;
-		ptr[j] = malloc(ccount(s, c) * sizeof(char));
-		if (!ptr)
+		split[j] = malloc(ccount(s,c,i) * sizeof(i));
+		if (s[i] == c)
+		{
+			j++;
+        	split[j] = malloc(ccount(s,c,i) * sizeof(i));
+			k = 0;
+		}
+		split[j][k] = s[i];
+		i++;
+		k++;
+	}
+	return (split);
 }

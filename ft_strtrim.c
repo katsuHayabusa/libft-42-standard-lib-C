@@ -6,11 +6,7 @@
 /*   By: saichaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 13:47:35 by saichaou          #+#    #+#             */
-/*   Updated: 2022/11/29 13:54:36 by saichaou         ###   ########.fr       */
+/*   Updated: 2022/11/30 01:44:58 by saichaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strtrim(char const *s1, char const *set)
-{
-
-}
