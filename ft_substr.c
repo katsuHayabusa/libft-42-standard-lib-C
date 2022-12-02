@@ -6,7 +6,7 @@
 /*   By: saichaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 13:23:17 by saichaou          #+#    #+#             */
-/*   Updated: 2022/11/30 06:23:53 by saichaou         ###   ########.fr       */
+/*   Updated: 2022/12/02 13:24:05 by saichaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	int		j;
 	char	*ptr;
 
+	if (!s)
+		return (NULL);
 	if (start >= ft_strlen(s))
 	{
 		ptr = malloc(1);
@@ -32,11 +34,13 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!ptr)
 		return (NULL);
 	while (start < len + j && s[start])
-	{
-		ptr[i] = s[start];
-		start++;
-		i++;
-	}
+		ptr[i++] = s[start++];
 	ptr[i] = '\0';
 	return (ptr);
+}
+
+int	main(void)
+{
+	char * s = ft_substr("tripouille", 0, 42000);
+	ft_substr(s, strlen("tripouille") + 1);
 }

@@ -6,7 +6,7 @@
 /*   By: saichaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 15:00:26 by saichaou          #+#    #+#             */
-/*   Updated: 2022/11/28 17:54:15 by saichaou         ###   ########.fr       */
+/*   Updated: 2022/12/01 14:58:29 by saichaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ static size_t	num_size(int n)
 	int				i;
 	unsigned int	pos_n;
 
-	i = 0;
+	i = 1;
 	pos_n = n;
 	if (n < 0)
 		pos_n *= -1;
-	while (pos_n > 0)
+	while (pos_n >= 10)
 	{
 		i++;
 		pos_n /= 10;
@@ -48,8 +48,6 @@ char	*ft_itoa(int n)
 	if (!str)
 		return (NULL);
 	str[i + 1] = '\0';
-	if (!str)
-		return (NULL);
 	if (neg_num(n))
 		str[0] = '-';
 	if (n < 0)
