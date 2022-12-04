@@ -6,7 +6,7 @@
 /*   By: saichaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 15:00:26 by saichaou          #+#    #+#             */
-/*   Updated: 2022/12/01 14:58:29 by saichaou         ###   ########.fr       */
+/*   Updated: 2022/12/04 11:58:17 by saichaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,15 @@ static int	neg_num(int n)
 	return (0);
 }
 
+char	*zero(char *str)
+{
+	str = malloc(2);
+	if (!str)
+		return (NULL);
+	str[0] = '0';
+	str[1] = '\0';
+	return (str);
+}
 char	*ft_itoa(int n)
 {
 	char			*str;
@@ -59,6 +68,6 @@ char	*ft_itoa(int n)
 		i--;
 	}
 	if (n == 0)
-		return ("0");
+		return (zero(str));
 	return (str);
 }
