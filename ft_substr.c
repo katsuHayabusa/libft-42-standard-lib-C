@@ -6,7 +6,7 @@
 /*   By: saichaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 13:23:17 by saichaou          #+#    #+#             */
-/*   Updated: 2022/12/02 13:24:05 by saichaou         ###   ########.fr       */
+/*   Updated: 2022/12/04 03:36:04 by saichaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,4 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		ptr[i++] = s[start++];
 	ptr[i] = '\0';
 	return (ptr);
-}
-
-int	main(void)
-{
-	char * s = ft_substr("tripouille", 0, 42000);
-	ft_substr(s, strlen("tripouille") + 1);
 }
