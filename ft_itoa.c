@@ -6,7 +6,7 @@
 /*   By: saichaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 15:00:26 by saichaou          #+#    #+#             */
-/*   Updated: 2022/12/04 11:58:17 by saichaou         ###   ########.fr       */
+/*   Updated: 2022/12/05 15:02:40 by saichaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ char	*zero(char *str)
 	str[1] = '\0';
 	return (str);
 }
+
 char	*ft_itoa(int n)
 {
 	char			*str;

@@ -5,43 +5,41 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: saichaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/14 13:23:17 by saichaou          #+#    #+#             */
-/*   Updated: 2022/12/04 13:31:38 by saichaou         ###   ########.fr       */
+/*   Created: 2022/12/05 17:57:26 by saichaou          #+#    #+#             */
+/*   Updated: 2022/12/05 17:59:00 by saichaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	sizestr(char const *s, size_t len)
+static int	sublen(char const *str, unsigned int start, size_t len)
 {
-	if (len > ft_strlen(s))
-		len = ft_strlen(s);
-	return (len);
+	size_t	res;
+
+	res = 0;
+	while (start < ft_strlen(str) && res < len)
+	{
+		res++;
+		start++;
+	}
+	return (res);
 }
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *str, unsigned int start, size_t len)
 {
-	int		i;
-	int		j;
-	char	*ptr;
+	char	*res;
+	size_t	i;
+	size_t	j;
 
-	if (!s)
+	if (!str)
 		return (NULL);
-	if (start >= ft_strlen(s))
-	{
-		ptr = malloc(1);
-		if (!ptr)
-			return (NULL);
-		ptr[0] = '\0';
-		return (ptr);
-	}
-	i = 0;
-	j = start;
-	ptr = malloc(sizestr(s, len) + 1);
-	if (!ptr)
+	res = malloc(sizeof(char) * (sublen(str, start, len) + 1));
+	if (!res)
 		return (NULL);
-	while (start < len + j && s[start])
-		ptr[i++] = s[start++];
-	ptr[i] = '\0';
-	return (ptr);
+	i = start;
+	j = 0;
+	while (i < ft_strlen(str) && j < len)
+		res[j++] = str[i++];
+	res[j] = 0;
+	return (res);
 }
