@@ -6,7 +6,7 @@
 /*   By: saichaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 13:54:40 by saichaou          #+#    #+#             */
-/*   Updated: 2022/12/13 15:12:17 by saichaou         ###   ########.fr       */
+/*   Updated: 2022/12/13 15:57:28 by saichaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,14 +62,13 @@ char	**ft_split(char const *s, char c)
 	int		i;
 	int		j;
 	
-	split = malloc(wcount(s, c) + 1);
+	split = malloc(wcount(s, c) + 1 * sizeof(char *));
 	i = 0;
 	j = 0;
 	while (s[i])
 	{
 		if (s[i] == c)
 		{
-			
 
 		}
 	}
