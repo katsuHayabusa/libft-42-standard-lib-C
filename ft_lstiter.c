@@ -6,7 +6,7 @@
 /*   By: saichaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 13:21:23 by saichaou          #+#    #+#             */
-/*   Updated: 2022/12/08 14:06:26 by saichaou         ###   ########.fr       */
+/*   Updated: 2022/12/11 17:56:16 by saichaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,10 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	if (!lst || !f)
 		return ;
-	while (lst && lst -> next)
+	while (lst -> next)
 	{
-		(*f)(lst -> content);
+		f(lst -> content);
 		lst = lst -> next;
 	}
+	f(lst -> content);
 }

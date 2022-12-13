@@ -6,7 +6,7 @@
 /*   By: saichaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 12:22:30 by saichaou          #+#    #+#             */
-/*   Updated: 2022/12/08 12:41:47 by saichaou         ###   ########.fr       */
+/*   Updated: 2022/12/12 01:04:39 by saichaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,13 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	while ((*lst) -> next && (*lst))
+	t_list	*tmp;
+	if (!lst || !del)
+		return ;
+	while (*lst)
 	{
-		ft_lstdelone(*lst, del);
-		*lst = (*lst) -> next;
-	}	
+		tmp = (*lst) -> next;
+		ft_lstdelone((*lst), del);
+		*lst = tmp;
+	}
 }
