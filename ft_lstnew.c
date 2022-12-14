@@ -6,7 +6,7 @@
 /*   By: saichaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 18:28:11 by saichaou          #+#    #+#             */
-/*   Updated: 2022/12/07 01:39:37 by saichaou         ###   ########.fr       */
+/*   Updated: 2022/12/14 16:29:17 by saichaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,4 @@ t_list	*ft_lstnew(void *content)
 	list -> content = content;
 	list -> next = NULL;
 	return (list);
-
 }
