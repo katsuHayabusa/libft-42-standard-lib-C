@@ -6,7 +6,7 @@
 /*   By: saichaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 14:48:39 by saichaou          #+#    #+#             */
-/*   Updated: 2022/12/01 14:33:07 by saichaou         ###   ########.fr       */
+/*   Updated: 2022/12/18 14:56:06 by saichaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,6 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	if (len == 0)
 		return (NULL);
 	i = 0;
-	if (len < 0)
-			len = ft_strlen((char *) big);
 	while (big[i] && i < len)
 	{
 		if (big[i] == *little)

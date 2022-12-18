@@ -6,7 +6,7 @@
 /*   By: saichaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 15:00:26 by saichaou          #+#    #+#             */
-/*   Updated: 2022/12/14 22:18:36 by saichaou         ###   ########.fr       */
+/*   Updated: 2022/12/18 15:23:51 by saichaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,9 @@ char	*ft_itoa(int n)
 		i--;
 	}
 	if (n == 0)
+	{
+		free(str);
 		return (zero(str));
+	}
 	return (str);
 }
