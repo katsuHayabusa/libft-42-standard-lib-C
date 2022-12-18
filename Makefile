@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: saichaou <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/12/18 12:46:36 by saichaou          #+#    #+#              #
+#    Updated: 2022/12/18 12:46:39 by saichaou         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 SRCS =	ft_atoi.c \
 		ft_isalpha.c \
 		ft_memcpy.c \
@@ -72,9 +84,5 @@ fclean: clean
 			${RM} ${NAME}
 
 re: fclean all
-
-so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS) $(SRCSBONUS)
-	gcc -nostartfiles -shared -o libft.so $(OBJS) $(OBJSBONUS)
 
 .PHONY:		bonus all clean fclean re
